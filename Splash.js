@@ -6,13 +6,13 @@ const SplashScreen = ({ navigation }) => {
   useEffect(() => {
     // Simulate a delay, e.g., 2000ms (2 seconds)
     setTimeout(() => {
-      navigation.replace("BottomTabNavigator"); // Replace with your navigator's name
+      navigation.replace("Login"); // Replace with your navigator's name
     }, 2000);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Image source={require("./assets/NFC Iet Logo.png")} />
+      <Image source={require("./assets/splash.png")} />
       <Text>Loading...</Text>
     </View>
   );

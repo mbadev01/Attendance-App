@@ -13,6 +13,9 @@ const BottomTabNavigator = () => {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
+        tabBarActiveTintColor: "#3A0CA3",
+        tabBarShowLabel: false,
+        tabBarStyle: { backgroundColor: "#4361EE" },
         tabBarIcon: ({ color, size }) => {
           let iconName;
 
@@ -26,25 +29,9 @@ const BottomTabNavigator = () => {
             iconName = "suitcase";
           }
 
-          return <Icon name={iconName} size={size} color={color} />;
+          return <Icon name={iconName} size={22} color={color} />;
         },
       })}
-      tabBarOptions={{
-        activeTintColor: "#d5bdaf", // Color of the active tab label and icon
-        inactiveTintColor: "gray", // Color of the inactive tab label and icon
-        showLabel: true, // Show/hide labels
-        labelStyle: {
-          fontSize: 12, // Font size of the tab label
-        },
-        style: {
-          backgroundColor: "black", // Background color of the bottom bar
-          borderTopWidth: 1, // Add a border at the top of the bottom bar
-          borderColor: "black", // Border color
-        },
-        tabStyle: {
-          paddingTop: 8, // Extra padding on the top of each tab
-        },
-      }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />

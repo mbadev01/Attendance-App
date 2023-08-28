@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import SplashScreen from "./Splash";
 import BottomTabNavigator from "./BottomTabNavigator";
+import LoginScreen from "./Screens/LoginScreen";
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const App = () => {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen
           name="BottomTabNavigator"
           component={BottomTabNavigator}
